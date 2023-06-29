@@ -53,6 +53,14 @@ export class ClientService {
 
   }
 
+  async sendTranscribe(data: IPayload) {
+    const { message } = data
+    const isAudio = message.isAudio
+    if (isNextAudio && isAudio && lastUser === message.author) {
+      await this.transcribeAudio(this.client, message, this.gptService)
+    }
+  }
+
 
   async transcribeAudio(client: Whatsapp, message: any, gpt?: GptService) {
     const buffer = await client.decryptFile(message);

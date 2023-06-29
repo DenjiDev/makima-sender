@@ -19,4 +19,14 @@ export class ClientController {
         channel.ack(originalMessage);
     }
 
+    @EventPattern('transcribe')
+    async handleTranscribeAudio(@Payload() data: any, @Ctx() context: RmqContext) {
+        const dataToSend = JSON.parse(data)
+        Logger.log(dataToSend)
+        this.clientService.sendTranscribe(dataToSend.data)
+        const channel = context.getChannelRef();
+        const originalMessage = context.getMessage();
+        channel.ack(originalMessage);
+    }
+
 }
