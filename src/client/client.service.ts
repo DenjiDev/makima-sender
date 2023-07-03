@@ -18,7 +18,9 @@ export class ClientService {
   async init() {
     create(
       'makima-sender',
-      () => { },
+      (base64Qrimg) => {
+        Logger.log('base64 image string qrcode: ', base64Qrimg);
+      },
       () => { },
       {
         folderNameToken: 'tokens',
