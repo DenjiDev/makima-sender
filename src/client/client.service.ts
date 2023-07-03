@@ -25,10 +25,7 @@ export class ClientService {
         headless: true,
         puppeteerOptions: {
           ignoreDefaultArgs: ['--disable-extensions']
-        },
-        browserArgs: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox']
+        }
       }
     )
       .then(async (client) => {
