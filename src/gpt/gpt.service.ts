@@ -8,8 +8,8 @@ export class GptService {
   private openAi: OpenAIApi
   constructor() {
     this.configuration = new Configuration({
-      organization: "org-9N03nkPvfRWFgIMtUTVN8IpE",
-      apiKey: "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",
+      organization: process.env.GPT_ORG,
+      apiKey: process.env.GPT_API_KEY,
     })
     this.openAi = new OpenAIApi(this.configuration)
   }
