@@ -2,8 +2,6 @@ on:
   pull_request:
     branches:
       - "**"
-    types:
-      - closed
     paths-ignore:
       - "**/*.md"
   push:
