@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
-import { otelSDK } from './tracing';
+
 import { DocumentBuilder, SwaggerDocumentOptions, SwaggerModule } from '@nestjs/swagger';
 const actuator = require('express-actuator')
 const swStats = require('swagger-stats');
@@ -10,7 +10,6 @@ const loggerInstance = new Logger('Bootstrap')
 const DEFAULT_API_PORT = 3000
 
 async function bootstrap() {
-  await otelSDK.start()
   const app = await NestFactory.create(AppModule);
   app.enableCors()
   app.use(actuator())
