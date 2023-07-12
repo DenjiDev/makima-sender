@@ -2,6 +2,8 @@ on:
   pull_request:
     branches:
       - "**"
+    types:
+      - closed
     paths-ignore:
       - "**/*.md"
   push:
@@ -41,7 +43,7 @@ jobs:
   ci_docker_dev:
     name: CI Docker - Dev
     needs: ci_test_sonar
-    if: ${{ success() && github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true}}
+    if: ${{ success() && github.event.pull_request.merged == true}}
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub Event Name
