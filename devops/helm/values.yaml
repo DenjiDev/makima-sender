@@ -96,3 +96,5 @@ makima-ms:
         value: b3JnLTlOMDNua1B2ZlJXRmdJTXRVVFZOOElwRQ==
       - name: GPT_API_KEY
         value: c2stM0toZGdpemYwbUswSFBhUFJkTE1UM0JsYmtGSlNBU21yUmEyanhiOGZ1bnFBMkh0
+      - name: REDIS_PASSWORD
+        value: MTMwODAwQWQ=
