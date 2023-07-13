@@ -36,6 +36,14 @@ makima-ms:
   # runAsNonRoot: true
   # runAsUser: 1000
 
+  local_volume:
+    path: /tokens
+    resources:
+      requests:
+        storage: 1Gi
+      limits:
+        storage: 1Gi
+
   service:
     type: ClusterIP
     port: 80
