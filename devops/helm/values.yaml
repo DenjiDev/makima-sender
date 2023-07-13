@@ -7,7 +7,7 @@ makima-ms:
     repository: qzzdocker24/makima-sender
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "4dcfa447e57469db2c7a089f6166f86828a9b3ad"
+    tag: "e357d7cc3134227dedb93ae372ebf1033e872e10"
   imagePullSecrets: []
   nameOverride: ""
   fullnameOverride: "makima-sender"
@@ -96,3 +96,5 @@ makima-ms:
         value: b3JnLTlOMDNua1B2ZlJXRmdJTXRVVFZOOElwRQ==
       - name: GPT_API_KEY
         value: c2stM0toZGdpemYwbUswSFBhUFJkTE1UM0JsYmtGSlNBU21yUmEyanhiOGZ1bnFBMkh0
+      - name: REDIS_PASSWORD
+        value: MTMwODAwQWQ=
