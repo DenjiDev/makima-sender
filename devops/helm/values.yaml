@@ -7,7 +7,7 @@ makima-ms:
     repository: qzzdocker24/makima-sender
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "000c76514fa7ff8a1f203570a8ff597ec7fb3d39"
+    tag: "9b38994fe3255e06571c767d2bb8fc7f327c11cf"
   imagePullSecrets: []
   nameOverride: ""
   fullnameOverride: "makima-sender"
@@ -43,7 +43,6 @@ makima-ms:
         storage: 1Gi
       limits:
         storage: 1Gi
-
   service:
     type: ClusterIP
     port: 80
