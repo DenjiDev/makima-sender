@@ -23,6 +23,7 @@ export class ClientService {
       },
       () => { },
       {
+        session: "makima-sender",
         folderNameToken: 'tokens',
         puppeteerOptions: {
           ignoreDefaultArgs: ['--disable-extensions']

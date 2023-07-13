@@ -98,7 +98,7 @@ makima-ms:
         value: "6379"
     secret:
       - name: REDIS_HOST
-        value: cmVkaXMucmVkaXMuc3ZjLmNsdXN0ZXIubG9jYWw=
+        value: cmVkaXMtMC5yZWRpcy5yZWRpcy5zdmMuY2x1c3Rlci5sb2NhbA==
       - name: GPT_ORG
         value: b3JnLTlOMDNua1B2ZlJXRmdJTXRVVFZOOElwRQ==
       - name: GPT_API_KEY
