@@ -40,14 +40,14 @@ makima-ms:
     type: ClusterIP
     port: 80
     targetPort: 8080
-  livenessProbe:
-    httpGet:
-      path: /health
-      port: http
-  readinessProbe:
-    httpGet:
-      path: /health
-      port: http
+  # livenessProbe:
+  #   httpGet:
+  #     path: /health
+  #     port: http
+  # readinessProbe:
+  #   httpGet:
+  #     path: /health
+  #     port: http
   ingress:
     enabled: false
     className: ""
