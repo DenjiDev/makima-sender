@@ -15,6 +15,7 @@ import { BullModule } from '@nestjs/bull';
         port: parseInt(process.env.REDIS_PORT) || 6379,
         password: process.env.REDIS_PASSWORD
       }
-    }),],
+    })
+  ],
 })
 export class AppModule { }
