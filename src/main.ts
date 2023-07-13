@@ -14,8 +14,8 @@ async function bootstrap() {
   app.enableCors()
   app.use(actuator())
   const config = new DocumentBuilder()
-    .setTitle('Denji Hosting API')
-    .setDescription('The Denji Hosting Main API')
+    .setTitle('Makima Sender MS')
+    .setDescription('Makima Sender MS')
     .setVersion(process.env.npm_package_version)
     .build();
   const options: SwaggerDocumentOptions = {
